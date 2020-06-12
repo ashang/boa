@@ -1,0 +1,33 @@
+--- signals.c	Sat Dec 14 21:54:49 1996
++++ signals.c.sun	Sat May  3 19:12:53 1997
+@@ -43,10 +43,10 @@
+     signal(SIGSEGV, sigsegv);
+     signal(SIGBUS,  sigbus);
+     signal(SIGTERM, sigterm);
+-    signal(SIGHUP,  sighup);
++    sigset(SIGHUP,  sighup);
+     signal(SIGINT,  sigint);
+     signal(SIGPIPE, SIG_IGN);
+-    signal(SIGCHLD, sigchld);
++    sigset(SIGCHLD, sigchld);
+ }
+ 
+ void sigsegv(int dummy)
+@@ -80,7 +80,7 @@
+ 
+ void sighup(int dummy)
+ {
+-    signal(SIGHUP, sighup);
++    /* signal(SIGHUP, sighup); */
+     sighup_flag=1;
+ }
+ 
+@@ -110,7 +110,7 @@
+ 
+ void sigchld(int dummy)
+ {
+-    signal(SIGCHLD, sigchld);
++    /* signal(SIGCHLD, sigchld); */
+     sigchld_flag=1;
+ }
+ 

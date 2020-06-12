@@ -1,0 +1,18 @@
+Begin3
+Title:		Boa
+Version:	0.92p
+Entered-date:   17 May 1997
+Description:    A high speed, lightweight web server (HTTP protocol).
+		Based on direct use of the select(2) system call, it
+		internally multiplexes all connections without forking,
+		for maximum speed and minimum system resource use.
+Keywords:       www HTTP world wide web server select
+Author:         psp@well.com (Paul Phillips)
+Maintained-by:  ldoolitt@jlab.org (Larry Doolittle)
+Primary-site:   http://www.boa.org/
+		61kB boa-0.92p.tar.gz
+Alternate-site: http://recycle.jlab.org/boa/
+Original-site:  http://www.boa.org/
+Platform:       Linux, FreeBSD, SunOS, HP-UX, AIX, other *nix
+Copying-policy: GPL
+End
